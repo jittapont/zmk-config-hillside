@@ -23,7 +23,6 @@
 #define Redo   LC(Y)
 
 / {
-
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -34,6 +33,7 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -42,42 +42,49 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+
         cut: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp X>, <&kp LG(X)>;
         };
+
         copy: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp C>, <&kp LG(C)>;
         };
+
         paste: tap_dance_2 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp V>, <&kp LG(V)>;
         };
+
         dt1: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp N1>, <&kp LC(N1)>;
         };
+
         dt2: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp N2>, <&kp LC(N2)>;
         };
+
         dt3: tap_dance_5 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp N3>, <&kp LC(N3)>;
         };
+
         dt4: tap_dance_6 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -101,7 +108,7 @@
             bindings = <
 &mt LS(LGUI) GRAVE  &kp Q  &kp W  &kp E  &kp R     &kp T                                                       &kp Y      &kp U     &kp I      &kp O    &kp P      &kp BSPC
 &kp TAB             &kp A  &kp S  &kp D  &kp F     &kp G                                                       &kp H      &kp J     &kp K      &kp L    &kp SEMI   &kp ENTER
-&kp LSHIFT          &kp Z  &kp X  &kp C  &kp V     &kp B     &kp ESC                            &kp ENTER      &kp N      &kp M     &kp COMMA  &kp DOT  &kp SLASH  &kp RSHIFT
+&kp LSHIFT          &kp Z  &cut   &copy  &paste    &kp B     &kp ESC                            &kp ENTER      &kp N      &kp M     &kp COMMA  &kp DOT  &kp SLASH  &kp RSHIFT
                                          &kp LGUI  &kp LALT  &kp SPACE  &mo NAV_L    &mo SYM_L  &kp BACKSPACE  &kp RCTRL  &kp RGUI
             >;
 
