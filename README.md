@@ -50,4 +50,4 @@ While RGB is disabled, any RGB control keys
 
 The Hillside shield definition files should *not* need to be modified and are in ./config/boards/shields.
 
-More information about each keymap is in their readme files.
+More information about each keymap is in their readme files. 
